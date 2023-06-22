@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.uaspbo.studentview.AOKAssignment3Controller">
+   <children>
+      <ImageView fitHeight="215.0" fitWidth="798.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/course%20tiles/inside%20course/AOK.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="720.0" prefWidth="285.0" style="-fx-background-color: #202225;">
+         <children>
+            <Text fx:id="greetingMessage" fill="WHITE" layoutX="26.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Fairo, welcome to Leitner! Happy learning!" wrappingWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Group layoutX="29.0" layoutY="626.0" />
+            <Group layoutX="29.0" layoutY="576.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40444b" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE" width="228.0" />
+                  <ImageView fx:id="gotoLoginPageButton" fitHeight="27.0" fitWidth="27.0" layoutX="99.0" layoutY="12.0" onMouseClicked="#logoutButtonOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Text fx:id="aboutUsButton" fill="WHITE" layoutX="29.0" layoutY="660.0" onMouseClicked="#gotoAboutUs" strokeType="OUTSIDE" strokeWidth="0.0" text="OPOSISI 2022 - About us" wrappingWidth="204.13671875" />
+            <VBox alignment="TOP_CENTER" layoutX="23.0" layoutY="151.0" prefHeight="200.0" prefWidth="239.0" spacing="16.0">
+               <children>
+                  <Button fx:id="yourCourseButton" alignment="BASELINE_LEFT" onAction="#gotoYourCourses" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Your Course" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assignmentsButton" alignment="BASELINE_LEFT" onAction="#gotoAssignments" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #40444b;" text="Assignments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quizButton" alignment="BASELINE_LEFT" onAction="#gotoQuiz" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Quiz" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gradesButton" alignment="BASELINE_LEFT" onAction="#gotoGrades" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Grades" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="yourProfileButton" alignment="BASELINE_LEFT" onAction="#gotoYourProfile" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Your profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="315.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 3">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label layoutX="315.0" layoutY="241.0" prefHeight="27.0" prefWidth="717.0" text="Label" />
+      <Button fx:id="startQuizBtn" alignment="BASELINE_CENTER" layoutX="310.0" layoutY="651.0" prefHeight="39.0" prefWidth="255.0" style="-fx-background-color: #5865f2;" text="Submit Assignment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <HBox layoutX="496.0" layoutY="241.0" prefHeight="27.0" prefWidth="200.0" />
+      <Label alignment="TOP_LEFT" layoutX="310.0" layoutY="231.0" prefHeight="165.0" prefWidth="727.0" text="1. Apa yang dimaksud dengan interkoneksi bus pada komputer dan bagaimana cara kerjanya?&#10;2. Bagaimana perbedaan antara bus lokal (LPC Bus) dan bus PCI pada komputer?&#10;3. Bagaimana cara mengatur prioritas akses pada interkoneksi bus yang terkoneksi dengan perangkat yang berbeda?&#10;4. Bagaimana perbedaan kecepatan akses antara interkoneksi bus dan koneksi langsung (DMA)?&#10;" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="310.0" layoutY="386.0" prefHeight="27.0" prefWidth="727.0" text="Enter your answer:" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="310.0" layoutY="427.0" prefHeight="200.0" prefWidth="727.0" style="-fx-control-inner-background: #1E2023;" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

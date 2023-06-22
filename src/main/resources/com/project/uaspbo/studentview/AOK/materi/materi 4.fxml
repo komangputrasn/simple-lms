@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.uaspbo.studentview.AOKMainWindowController">
+   <children>
+      <ImageView fitHeight="215.0" fitWidth="798.0" layoutX="285.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/course%20tiles/inside%20course/AOK.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-1.0" prefHeight="720.0" prefWidth="285.0" style="-fx-background-color: #202225;">
+         <children>
+            <Text fx:id="greetingMessage" fill="WHITE" layoutX="26.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Fairo, welcome to Leitner! Happy learning!" wrappingWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Group layoutX="29.0" layoutY="626.0" />
+            <Group layoutX="29.0" layoutY="576.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40444b" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE" width="228.0" />
+                  <ImageView fx:id="gotoLoginPageButton" fitHeight="27.0" fitWidth="27.0" layoutX="99.0" layoutY="12.0" onMouseClicked="#logoutButtonOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Text fx:id="aboutUsButton" fill="WHITE" layoutX="29.0" layoutY="660.0" onMouseClicked="#gotoAboutUs" strokeType="OUTSIDE" strokeWidth="0.0" text="OPOSISI 2022 - About us" wrappingWidth="204.13671875" />
+            <VBox alignment="TOP_CENTER" layoutX="23.0" layoutY="151.0" prefHeight="200.0" prefWidth="239.0" spacing="16.0">
+               <children>
+                  <Button fx:id="yourCourseButton" alignment="BASELINE_LEFT" onAction="#gotoYourCourses" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #40444b;" text="Your Course" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assignmentsButton" alignment="BASELINE_LEFT" onAction="#gotoAssignments" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Assignments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quizButton" alignment="BASELINE_LEFT" onAction="#gotoQuiz" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Quiz" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gradesButton" alignment="BASELINE_LEFT" onAction="#gotoGrades" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Grades" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="yourProfileButton" alignment="BASELINE_LEFT" onAction="#gotoYourProfile" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Your profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="315.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materi 4">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <ScrollPane hbarPolicy="NEVER" layoutX="315.0" layoutY="234.0" prefHeight="450.0" prefWidth="744.0" style="-fx-background-color: #36393F;" vbarPolicy="NEVER">
+         <content>
+            <AnchorPane style="-fx-background-color: #36393F;">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="957.0" prefWidth="745.0" style="-fx-background-color: transparent;" text="Cache memory merupakan jenis memori yang digunakan untuk meningkatkan kecepatan akses data pada komputer. Cache memory biasanya terletak di antara CPU dan memori utama dan berfungsi sebagai tempat penyimpanan sementara untuk data yang sering diakses oleh CPU. Berikut ini akan dijelaskan lebih lanjut tentang cache memory.&#10;&#10;Cache memory terdiri dari beberapa tingkatan, yaitu cache L1, cache L2, dan cache L3. Cache L1 merupakan tingkat cache yang paling dekat dengan CPU dan memiliki kecepatan akses yang paling tinggi. Cache L2 merupakan tingkat cache yang berada di antara cache L1 dan memori utama dan memiliki kecepatan akses yang lebih rendah dibandingkan dengan cache L1. Cache L3 merupakan tingkat cache yang paling jauh dari CPU dan memiliki kecepatan akses yang lebih rendah dibandingkan dengan cache L2.&#10;&#10;Cache memory bekerja dengan cara menyimpan data yang sering diakses oleh CPU pada tingkat cache yang tepat. Jika CPU membutuhkan data yang disimpan pada cache memory, maka data tersebut dapat diakses dengan cepat, sehingga dapat meningkatkan kecepatan akses data secara keseluruhan. Namun, jika data yang dibutuhkan oleh CPU tidak tersimpan pada cache memory, maka CPU harus mengakses data tersebut dari memori utama, yang memiliki kecepatan akses yang lebih rendah dibandingkan dengan cache memory.&#10;&#10;Cache memory juga memiliki ukuran yang terbatas, sehingga tidak semua data yang diakses oleh CPU dapat disimpan pada cache memory. Oleh karena itu, penting untuk mengelola cache memory dengan baik agar dapat meningkatkan kecepatan akses data secara efektif. Salah satu cara yang dapat dilakukan untuk mengelola cache memory adalah dengan mengoptimalkan algoritma pengalokasian cache, seperti algoritma LRU (Least Recently Used) atau algoritma FIFO (First In First Out).&#10;&#10;Cache memory merupakan komponen yang penting dalam arsitektur komputer dan dapat meningkatkan kecepatan akses data secara signifikan. Namun, cache memory juga memiliki ukuran yang terbatas dan harus dioptimalkan dengan baik agar dapat meningkatkan kecepatan akses data secara efektif. Oleh karena itu, penting untuk memahami bagaimana cache memory bekerja dan mengelola sistem dengan baik agar dapat meningkatkan kecepatan akses data secara keseluruhan.&#10;&#10;" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

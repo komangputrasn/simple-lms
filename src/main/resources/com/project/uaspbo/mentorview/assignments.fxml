@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.uaspbo.mentorview.AssignmentController">
+   <children>
+      <ImageView fitHeight="215.0" fitWidth="798.0" layoutX="285.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/course%20tiles/inside%20course/AOK.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-1.0" prefHeight="720.0" prefWidth="285.0" style="-fx-background-color: #202225;">
+         <children>
+            <Text fx:id="greetingMessage" fill="WHITE" layoutX="29.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Fairo, welcome to Leitner! Happy learning!" wrappingWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Group layoutX="29.0" layoutY="626.0" />
+            <Group layoutX="29.0" layoutY="576.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40444b" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE" width="228.0" />
+                  <ImageView fx:id="gotoLoginPageButton" fitHeight="27.0" fitWidth="27.0" layoutX="99.0" layoutY="12.0" onMouseClicked="#logoutButtonOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Text fx:id="aboutUsButton" fill="WHITE" layoutX="29.0" layoutY="660.0" onMouseClicked="#gotoAboutUs" strokeType="OUTSIDE" strokeWidth="0.0" text="OPOSISI 2022 - About us" wrappingWidth="204.13671875" />
+            <VBox alignment="TOP_CENTER" layoutX="23.0" layoutY="151.0" prefHeight="200.0" prefWidth="239.0" spacing="16.0">
+               <children>
+                  <Button fx:id="yourCourseButton" alignment="BASELINE_LEFT" onAction="#gotoYourCourses" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Your Course" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assignmentsButton" alignment="BASELINE_LEFT" onAction="#gotoAssignments" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #40444b;" text="Assignments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quizButton" alignment="BASELINE_LEFT" onAction="#gotoQuiz" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Quiz" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gradesButton" alignment="BASELINE_LEFT" onAction="#gotoGrades" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Students" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="316.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arsitektur dan Organisasi Komputer">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="316.0" layoutY="243.0" style="-fx-background-color: #36393F;">
+         <content>
+            <AnchorPane style="-fx-background-color: #36393F;">
+               <children>
+                  <VBox fx:id="coursesAssignmentGroups" prefHeight="200.0" prefWidth="100.0" spacing="45.0">
+                     <children>
+                        <Group fx:id="AOKCourseGroup">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arsitektur dan Organisasi Komputer">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox layoutY="23.0" prefHeight="200.0" prefWidth="100.0" spacing="19.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="AOKAssignment1Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="AOKAssignment2Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 3">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="AOKAssignment3Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group fx:id="DAACourseGroup">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Desain dan Analisis Algoritma">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox layoutY="23.0" prefHeight="200.0" prefWidth="100.0" spacing="19.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="DAAAssignment1Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="DAAAssignment2Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 3">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="DAAAssignment3Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group fx:id="IMKCourseGroup">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Interaksi Manusia Komputer">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox layoutY="23.0" prefHeight="200.0" prefWidth="100.0" spacing="19.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="IMKAssignment1Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="IMKAssignment2Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 3">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="IMKAssignment3Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group fx:id="PBOCourseGroup">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pemrogramman Berorientasi Objek">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox layoutY="23.0" prefHeight="200.0" prefWidth="100.0" spacing="19.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="PBOAssignment1Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="PBOAssignment2Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2023" height="88.0" stroke="TRANSPARENT" strokeType="INSIDE" width="713.0" />
+                                          <Text fill="WHITE" layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment 3">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="PBOAssignment3Button" alignment="BOTTOM_CENTER" layoutX="485.0" layoutY="25.0" onAction="#gotoAssignments" prefHeight="16.0" prefWidth="177.0" style="-fx-background-color: #5865f2;" text="See assignment" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

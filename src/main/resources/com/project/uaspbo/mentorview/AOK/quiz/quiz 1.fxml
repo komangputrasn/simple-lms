@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.uaspbo.mentorview.AOKQuiz1Controller">
+   <children>
+      <ImageView fitHeight="215.0" fitWidth="798.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/course%20tiles/inside%20course/AOK.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="720.0" prefWidth="285.0" style="-fx-background-color: #202225;">
+         <children>
+            <Text fx:id="greetingMessage" fill="WHITE" layoutX="26.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Fairo, welcome to Leitner! Happy learning!" wrappingWidth="236.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Group layoutX="29.0" layoutY="626.0" />
+            <Group layoutX="29.0" layoutY="576.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40444b" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE" width="228.0" />
+                  <ImageView fx:id="gotoLoginPageButton" fitHeight="27.0" fitWidth="27.0" layoutX="99.0" layoutY="12.0" onMouseClicked="#logoutButtonOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Text fx:id="aboutUsButton" fill="WHITE" layoutX="29.0" layoutY="660.0" onMouseClicked="#gotoAboutUs" strokeType="OUTSIDE" strokeWidth="0.0" text="OPOSISI 2022 - About us" wrappingWidth="204.13671875" />
+            <VBox alignment="TOP_CENTER" layoutX="23.0" layoutY="151.0" prefHeight="200.0" prefWidth="239.0" spacing="16.0">
+               <children>
+                  <Button fx:id="yourCourseButton" alignment="BASELINE_LEFT" onAction="#gotoYourCourses" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Your Course" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assignmentsButton" alignment="BASELINE_LEFT" onAction="#gotoAssignments" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Assignments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quizButton" alignment="BASELINE_LEFT" onAction="#gotoQuiz" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #40444b;" text="Quiz" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gradesButton" alignment="BASELINE_LEFT" onAction="#gotoGrades" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: #1E2023;" text="Students" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="315.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz 1">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label layoutX="315.0" layoutY="241.0" prefHeight="27.0" prefWidth="717.0" text="Label" />
+      <HBox layoutX="496.0" layoutY="241.0" prefHeight="27.0" prefWidth="200.0" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="320.0" layoutY="250.0" prefHeight="395.0" prefWidth="709.0" style="-fx-background-color: #36393F;" vbarPolicy="NEVER">
+         <content>
+            <Pane style="-fx-background-color: #36393F;">
+               <children>
+                  <VBox prefHeight="1361.0" prefWidth="707.0" spacing="34.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <TextField fx:id="deskripsiSoal1" prefHeight="64.0" prefWidth="707.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Apa yang dimaksud dengan arsitektur komputer?">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <VBox layoutX="3.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal1" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal1" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban1Soal1" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Bagaimana sebuah sistem komputer terdiri dari komponen-komponen yang berinteraksi satu sama lain">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal11" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban2Soal1" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Bagaimana komponen-komponen komputer diorganisir dan diatur agar dapat bekerja secara efisien">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal12" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal12" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban3Soal1" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Perangkat fisik yang terdiri dari komponen-komponen seperti processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal13" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal13" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban4Soal1" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Program-program yang menjalankan berbagai fungsi di dalam komputer, termasuk sistem operasi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <TextField fx:id="deskripsiSoal2" prefHeight="64.0" prefWidth="707.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Apa yang dimaksud dengan organisasi komputer?">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <VBox layoutX="3.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal11" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban1Soal2" layoutX="39.0" layoutY="8.0" onAction="#jawaban1Soal2" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Bagaimana sebuah sistem komputer terdiri dari komponen-komponen yang berinteraksi satu sama lain">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal111" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal111" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban2Soal2" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Bagaimana komponen-komponen komputer diorganisir dan diatur agar dapat bekerja secara efisien">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal121" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal121" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban3Soal2" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Perangkat fisik yang terdiri dari komponen-komponen seperti processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal131" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal131" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban4Soal2" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Program-program yang menjalankan berbagai fungsi di dalam komputer, termasuk sistem operasi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <TextField fx:id="deskripsiSoal3" prefHeight="64.0" prefWidth="707.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Apa yang dimaksud dengan model von Neumann dalam organisasi komputer?">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <VBox layoutX="3.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal11" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban1Soal3" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan sebuah bus utama yang menghubungkan semua komponen komputer, termasuk processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal112" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal112" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban2Soal3" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan dua bus utama yang terpisah, satu untuk data dan satu lagi untuk instruksi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal122" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal122" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban3Soal3" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan satu bus utama untuk menghubungkan processor, memory, dan perangkat input/output, sementara memiliki dua cache memory yang terpisah untuk data dan instruksi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal132" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal132" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban4Soal3" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Tidak ada yang benar">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <TextField fx:id="deskripsiSoal4" layoutX="1.0" prefHeight="64.0" prefWidth="707.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Apa yang dimaksud dengan model Harvard dalam organisasi komputer?">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <VBox layoutX="3.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal11" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban1Soal4" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan sebuah bus utama yang menghubungkan semua komponen komputer, termasuk processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal114" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal114" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban2Soal4" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan dua bus utama yang terpisah, satu untuk data dan satu lagi untuk instruksi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal124" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal124" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban3Soal4" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan satu bus utama untuk menghubungkan processor, memory, dan perangkat input/output, sementara memiliki dua cache memory yang terpisah untuk data dan instruksi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal134" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal134" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban4Soal4" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text=" Tidak ada yang benar">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <TextField fx:id="deskripsiSoal5" prefHeight="64.0" prefWidth="707.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Apa yang dimaksud dengan model Harvard-komputer dalam organisasi komputer?">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <VBox layoutX="3.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal11" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban1Soal5" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan sebuah bus utama yang menghubungkan semua komponen komputer, termasuk processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal113" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal113" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban2Soal5" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan dua bus utama yang terpisah, satu untuk data dan satu lagi untuk">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal123" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal123" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban3Soal5" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Perangkat fisik yang terdiri dari komponen-komponen seperti processor, memory, dan input/output devices">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <RadioButton fx:id="pilihan1Soal133" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="20.0" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="9.0" />
+                                             </padding>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="soal133" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <TextField fx:id="jawaban4Soal5" layoutX="39.0" layoutY="8.0" prefHeight="47.0" prefWidth="662.0" style="-fx-background-color: #1E2023; -fx-text-fill: #FFFFFF;" text="Menggunakan satu bus utama untuk menghubungkan processor, memory, dan perangkat input/output, sementara memiliki dua cache memory yang terpisah untuk data dan instruksi">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Group>
+                        <Button fx:id="saveChangesButton" alignment="BASELINE_CENTER" onAction="#setSaveChangesButtonOnAction" prefHeight="59.0" prefWidth="236.0" style="-fx-background-color: #5865f2;" text="Save changes" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
